@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'kun/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'kun/css/styles.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"/>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <header>
+      <div class="container text-center mt-5">
+        <div class="row" style="display: flex">
+          <div class="col-xl-2 col-md-12" style="margin-right: 15px; width: auto;">
+            <img class="logo" src="{% static 'kun/images/kun-uz-logo.svg' %}"/>
+          </div>
+          {% for c in cats %}
+          <div class="col-xl-2 col-md-6" style="width: auto; margin-right: 15px;">
+            <a class="text-decoration-none cat-element" href="#">{{ c.name }}</a>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="row mt-4 regions">
+            <div class="col-xl-1 col-md-6 region" style="width: auto; margin-right: 5px;">
+                Hududlar
+            </div>
+            {% for r in regions %}
+            <div class="col-xl-1 col-md-6" style="width: auto;">
+                <a href="#" class="text-decoration-none region-element">{{r.name}}</a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </header>
+
+    <section></section>
+
+    <footer></footer>
+
+    <script src="{% static 'kun/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+:root {
+    --white: #fff;
+    --dblue: #17206a;
+    --grey: #585858;
+}
+body {
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.cats{
+    font-size: 18px
+}
+.cat-element {
+    color: black;
+    transition: .2s ease;
+}
+.cat-element:hover {
+    color: rgb(7, 7, 173);
+}
+
+.regions {
+    font-size: 12px;
+    height: 43px;
+    background-color: #F0F0F0;
+    align-items: center;
+}
+
+.region-element {
+    color: black;
+}
+
+.region {
+    background-color: #17206a;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 40px;
+    position: relative;
+}
+
+.region::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -12px;
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-style: solid;
+    border-width: 20px 0 20px 12px;
+    border-color: transparent transparent transparent #17206a;
+}
